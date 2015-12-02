@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  address: MyText
+  info: MyText
+  history: MyText
+  admission: MyText
+  fees: MyText
+  events: MyText
+  gallery: MyText
+  others: MyText
+  logo: MyText
+  cover: MyText
+
+two:
+  name: MyText
+  address: MyText
+  info: MyText
+  history: MyText
+  admission: MyText
+  fees: MyText
+  events: MyText
+  gallery: MyText
+  others: MyText
+  logo: MyText
+  cover: MyText
