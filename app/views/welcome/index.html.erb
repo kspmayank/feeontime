@@ -1,2 +1,122 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div style="background: #E9F5F5;">
+<div style="background-color: #072559; height: 13em;">
+	<%= form_tag '/logidfdfdfdfn' do %>
+	<center><div id="custom-search-input" style="padding-top: 5em;">
+		<div class="input-group col-md-6">
+			<!-- <input type="text" class="form-control input-lg" placeholder="Buscar" /> -->
+	  		<%= text_field_tag :search, nil, class: "form-control input-lg", placeholder: 'Search Colleges...'   %>
+			<span class="input-group-btn">
+				<!-- <button class="btn btn-info btn-lg" type="button"> -->
+	  				<%# submit_tag "", :class => 'btn btn-info btn-lg' %>
+					<%= button_tag(type: 'submit', class: "btn btn-info btn-lg") do %>
+					<i class="glyphicon glyphicon-search"></i>
+					<% end %>
+			</span>
+		</div>
+	</div></center>
+
+	<% end %>
+</div>
+
+<div style="background: #04183B;">
+	<div class="container">
+	<ul class="nav nav-tabs">
+		<li class="active"><a data-toggle="tab" href="#home">All</a></li>
+		<li><a data-toggle="tab" href="#menu1">Colleges</a></li>
+		<li><a data-toggle="tab" href="#menu2">Schools</a></li>
+		<li><a data-toggle="tab" href="#menu3">Tutions</a></li>
+	</ul>
+	</div>
+</div>
+<div class="container">
+<div class="tab-content">
+	<div id="home" class="tab-pane fade in active">
+		<center><h3 style="color: #41BAE5;">List of All School, Colleges and Tutions In India Based</h3></center>
+
+		<%@institute. each do |i|%>
+		<div class="row" style="margin:2em;">
+			<div class="col-md-2"></div>
+			<a href="http://mayankkashyap.com">
+			<div class="col-md-8" style="background: #fff; border-radius: 10px; padding: 0;">
+				<div class="col-md-2" style="padding : 0;">
+					<img src="http://mayankkashyap.com/img/Mayank%20Kashyap%202.jpg" height="100" width="100">
+				</div>
+				<div class="col-md-10" style="padding: 0;">
+				<h3 style="margin-top: 10px; color: #000;">Maharaja Surajmal Institute of Technology, New Delhi</h3>
+				<i class="glyphicon glyphicon-map-marker" style="color: #616161;"></i> <span style="color: #616161; font-size: 1.1em;">C-4, Janakpuri, New Delhi</span>
+				</div>
+			</div></a>
+			<div class="col-md-2"></div>
+		</div>
+
+		<%end%>	  
+	</div>
+
+	<div id="menu1" class="tab-pane fade">
+		<center><h3 style="color: #41BAE5;">List of All Colleges In India Based</h3></center>
+
+		<%@institute. each do |i|%>
+		<div class="row" style="margin:2em;">
+			<div class="col-md-2"></div>
+			<div class="col-md-8" style="background: #fff; border-radius: 10px; padding: 0;">
+				<div class="col-md-2" style="padding : 0;">
+					<img src="http://mayankkashyap.com/img/Mayank%20Kashyap%202.jpg" height="100" width="100">
+				</div>
+				<div class="col-md-10" style="padding: 0;">
+				<h3 style="margin-top: 10px; color: #000;">Maharaja Surajmal Institute of Technology, New Delhi</h3>
+				<i class="glyphicon glyphicon-map-marker" style="color: #616161;"></i> <span style="color: #616161; font-size: 1.1em;">C-4, Janakpuri, New Delhi</span>
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+
+		<%end%>	  
+	</div>
+
+	<div id="menu2" class="tab-pane fade">
+		<center><h3 style="color: #41BAE5;">List of All Schools In India Based</h3></center>
+
+		<%@institute. each do |i|%>
+		<div class="row" style="margin:2em;">
+			<div class="col-md-2"></div>
+			<div class="col-md-8" style="background: #fff; border-radius: 10px; padding: 0;">
+				<div class="col-md-2" style="padding : 0;">
+					<img src="http://mayankkashyap.com/img/Mayank%20Kashyap%202.jpg" height="100" width="100">
+				</div>
+				<div class="col-md-10" style="padding: 0;">
+				<h3 style="margin-top: 10px; color: #000;">Maharaja Surajmal Institute of Technology, New Delhi</h3>
+				<i class="glyphicon glyphicon-map-marker" style="color: #616161;"></i> <span style="color: #616161; font-size: 1.1em;">C-4, Janakpuri, New Delhi</span>
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+
+		<%end%>	  
+	</div>
+
+	<div id="menu3" class="tab-pane fade">
+		<center><h3 style="color: #41BAE5;">List of All Tutions In India Based</h3></center>
+
+		<%@institute. each do |i|%>
+		<div class="row" style="margin:2em;">
+			<div class="col-md-2"></div>
+			<div class="col-md-8" style="background: #fff; border-radius: 10px; padding: 0;">
+				<div class="col-md-2" style="padding : 0;">
+					<img src="http://mayankkashyap.com/img/Mayank%20Kashyap%202.jpg" height="100" width="100">
+				</div>
+				<div class="col-md-10" style="padding: 0;">
+				<h3 style="margin-top: 10px; color: #000;">Maharaja Surajmal Institute of Technology, New Delhi</h3>
+				<i class="glyphicon glyphicon-map-marker" style="color: #616161;"></i> <span style="color: #616161; font-size: 1.1em;">C-4, Janakpuri, New Delhi</span>
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+
+		<%end%>	  
+	</div>
+
+
+
+</div>
+</div>
+</div>

@@ -7,9 +7,10 @@ class InstituteController < ApplicationController
   end
 
   def create
-	  @institue = Institute.new(institute_params)
-	 
-	  if @institute.save
+  	p institute_params
+	  if @institue = Institute.create(institute_params)
+	  	# p @institute
+	  	# @institute.save
 	    redirect_to @institute
 	  else
 	    render 'new'
@@ -17,6 +18,21 @@ class InstituteController < ApplicationController
   end
 
   def edit
+  	@institute = Institute.find(params[:id])
+  end
+
+  def show
+  	p @institute = Institute.find(params[:id])
+  end
+
+  def update
+  	p '1'
+  	p @institute = Institute.find(params[:id])
+	if @institute.update(institute_params)
+  		redirect_to '/institute/#{params[:id]}'
+  	else
+  		render 'edit'
+  	end
   end
 
   private
