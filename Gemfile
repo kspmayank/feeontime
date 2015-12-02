@@ -32,6 +32,8 @@ gem 'bcrypt', '~> 3.1.7'
 #Use web text editor and file uploader
 gem 'ckeditor'
 gem 'paperclip'
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'autoprefixer-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
