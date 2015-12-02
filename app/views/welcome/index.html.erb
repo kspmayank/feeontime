@@ -1,5 +1,5 @@
 <div style="background: #E9F5F5;">
-<div style="background-color: #072559; height: 13em;">
+<div style="background-image: linear-gradient(to bottom, rgba(7, 37, 89, 0.8), rgba(7, 37, 89, 0.8)), url('/college.jpg'); background-size: cover; height: 13em;">
 	<%= form_tag '/logidfdfdfdfn' do %>
 	<center><div id="custom-search-input" style="padding-top: 5em;">
 		<div class="input-group col-md-6">
@@ -39,11 +39,11 @@
 			<a href="http://mayankkashyap.com">
 			<div class="col-md-8" style="background: #fff; border-radius: 10px; padding: 0;">
 				<div class="col-md-2" style="padding : 0;">
-					<img src="http://mayankkashyap.com/img/Mayank%20Kashyap%202.jpg" height="100" width="100">
+					<img src="<%=i.logo.url%>" height="100" width="100">
 				</div>
 				<div class="col-md-10" style="padding: 0;">
-				<h3 style="margin-top: 10px; color: #000;">Maharaja Surajmal Institute of Technology, New Delhi</h3>
-				<i class="glyphicon glyphicon-map-marker" style="color: #616161;"></i> <span style="color: #616161; font-size: 1.1em;">C-4, Janakpuri, New Delhi</span>
+				<h3 style="margin-top: 10px; color: #000;"><%=i.name%></h3>
+				<i class="glyphicon glyphicon-map-marker" style="color: #616161;"></i> <span style="color: #616161; font-size: 1.1em;"><%=i.address%></span>
 				</div>
 			</div></a>
 			<div class="col-md-2"></div>
@@ -58,6 +58,7 @@
 		<%@institute. each do |i|%>
 		<div class="row" style="margin:2em;">
 			<div class="col-md-2"></div>
+			<a href="http://mayankkashyap.com">
 			<div class="col-md-8" style="background: #fff; border-radius: 10px; padding: 0;">
 				<div class="col-md-2" style="padding : 0;">
 					<img src="http://mayankkashyap.com/img/Mayank%20Kashyap%202.jpg" height="100" width="100">
@@ -67,6 +68,7 @@
 				<i class="glyphicon glyphicon-map-marker" style="color: #616161;"></i> <span style="color: #616161; font-size: 1.1em;">C-4, Janakpuri, New Delhi</span>
 				</div>
 			</div>
+			</a>
 			<div class="col-md-2"></div>
 		</div>
 
@@ -79,6 +81,7 @@
 		<%@institute. each do |i|%>
 		<div class="row" style="margin:2em;">
 			<div class="col-md-2"></div>
+			<a href="http://mayankkashyap.com">
 			<div class="col-md-8" style="background: #fff; border-radius: 10px; padding: 0;">
 				<div class="col-md-2" style="padding : 0;">
 					<img src="http://mayankkashyap.com/img/Mayank%20Kashyap%202.jpg" height="100" width="100">
@@ -87,7 +90,7 @@
 				<h3 style="margin-top: 10px; color: #000;">Maharaja Surajmal Institute of Technology, New Delhi</h3>
 				<i class="glyphicon glyphicon-map-marker" style="color: #616161;"></i> <span style="color: #616161; font-size: 1.1em;">C-4, Janakpuri, New Delhi</span>
 				</div>
-			</div>
+			</div></a>
 			<div class="col-md-2"></div>
 		</div>
 
@@ -100,6 +103,7 @@
 		<%@institute. each do |i|%>
 		<div class="row" style="margin:2em;">
 			<div class="col-md-2"></div>
+			<a href="http://mayankkashyap.com">
 			<div class="col-md-8" style="background: #fff; border-radius: 10px; padding: 0;">
 				<div class="col-md-2" style="padding : 0;">
 					<img src="http://mayankkashyap.com/img/Mayank%20Kashyap%202.jpg" height="100" width="100">
@@ -108,7 +112,7 @@
 				<h3 style="margin-top: 10px; color: #000;">Maharaja Surajmal Institute of Technology, New Delhi</h3>
 				<i class="glyphicon glyphicon-map-marker" style="color: #616161;"></i> <span style="color: #616161; font-size: 1.1em;">C-4, Janakpuri, New Delhi</span>
 				</div>
-			</div>
+			</div></a>
 			<div class="col-md-2"></div>
 		</div>
 

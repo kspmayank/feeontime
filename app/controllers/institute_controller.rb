@@ -37,7 +37,7 @@ class InstituteController < ApplicationController
 
   private
   def institute_params
-    params.require(:institute).permit(:name, :address, :info, :history, :admission, :fees, :events, :others)
+    params.require(:institute).permit(:name, :address, :info, :history, :admission, :fees, :events, :others, :logo, :cover)
   end
 
 end
