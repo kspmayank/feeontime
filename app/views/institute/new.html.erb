@@ -1,1 +1,41 @@
 <h1>Add An Institute</h1>
+
+<br>
+<%= form_for :institute, url: '/addinstitute' do |f| %>
+  <p>
+    <%= f.label :name_of_institute %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :info %><br>
+    <%= f.cktext_area :info, :class => 'someclass', :ckeditor => {:language => 'en'} %>
+  </p>
+  <p>
+    <%= f.label :history %><br>
+    <%= f.cktext_area :history, :class => 'someclass', :ckeditor => {:language => 'en'} %>
+  </p>
+  <p>
+    <%= f.label :admission %><br>
+    <%= f.cktext_area :admission, :class => 'someclass', :ckeditor => {:language => 'en'} %>
+  </p>
+  <p>
+    <%= f.label :fees %><br>
+    <%= f.cktext_area :fees, :class => 'someclass', :ckeditor => {:language => 'en'} %>
+  </p>
+  <p>
+    <%= f.label :events %><br>
+    <%= f.cktext_area :events, :class => 'someclass', :ckeditor => {:language => 'en'} %>
+  </p>
+  <p>
+    <%= f.label :others %><br>
+    <%= f.cktext_area :others, :class => 'someclass', :ckeditor => {:language => 'en'} %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   get 'institute/index'
 
   get 'institute/new'
@@ -29,6 +30,8 @@ Rails.application.routes.draw do
 
   post '/signup' => 'user#create'
   post '/login' => 'session#login'
+
+  post '/addinstitue' => 'institute#create'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
