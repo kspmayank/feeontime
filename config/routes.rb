@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'institute/index'
+
+  get 'institute/new'
+
+  get 'institute/edit'
+
   get 'welcome/index'
 
   get 'institue/index'
