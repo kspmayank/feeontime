@@ -13,7 +13,7 @@ class InstituteController < ApplicationController
   def create
     if session[:user_id]
     	p institute_params
-  	  if @institue = Institute.create(institute_params)
+  	  if @institute = Institute.create(institute_params)
   	  	# p @institute
   	  	# @institute.save
   	    redirect_to '/institute/'+@institute.id+'/edit#upload-images'
