@@ -84,3 +84,33 @@
     <%= f.submit %>
   </p></center>
 <% end %>
+
+<h2>Upload Images For Gallery Slider Here</h2>
+
+<%= form_for :gallery, url: '/gallery/'+@institute.id.to_s do |f| %>
+	<%= f.file_field :gallery, :multiple => true  %>
+	<%# f.text_field :institute_id,  %>
+	<%= f.submit %>
+<%end%>
+
+<h3>Existing Images</h3>
+<%@gallery.each do |g|%>
+	<img src="<%=g.photo.url%>" height="100" width="100">
+<%end%>
+	<%# image_tag @gallery.first.photo.url %>
+
+
+
+<h2>Upload Images For Events Slider Here</h2>
+
+<%= form_for :event, url: '/event/'+@institute.id.to_s do |f| %>
+	<%= f.file_field :event, :multiple => true  %>
+	<%# f.text_field :institute_id,  %>
+	<%= f.submit %>
+<%end%>
+
+<h3>Existing Images</h3>
+<%@event_imgs.each do |e|%>
+	<img src="<%=e.photo.url%>" height="100" width="100">
+<%end%>
+	<%# image_tag @gallery.first.photo.url %>	

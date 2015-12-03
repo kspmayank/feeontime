@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'event/new'
+
+  get 'event/show'
+
+  get 'gallery/new'
+
+  get 'gallery/show'
+
   mount Ckeditor::Engine => '/ckeditor'
   get 'institute/index'
 
@@ -33,6 +41,10 @@ Rails.application.routes.draw do
 
   post '/addinstitue' => 'institute#create'
 
+  post '/gallery/:institute_id' => 'gallery#create'
+  post '/event/:institute_id' => 'event#create'
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -42,6 +54,8 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
       resources :institute
+      resources :gallery
+      resources :event
   # Example resource route with options:
   #   resources :products do
   #     member do

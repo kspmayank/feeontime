@@ -19,17 +19,21 @@ class InstituteController < ApplicationController
 
   def edit
   	@institute = Institute.find(params[:id])
+    p @gallery = Gallery.where(institute_id: params[:id]).all
+    @event_imgs = Event.where(institute_id: params[:id]).all    
   end
 
   def show
   	p @institute = Institute.find(params[:id])
+    p @gallery = Gallery.where(institute_id: params[:id]).all
+    @event_imgs = Event.where(institute_id: params[:id]).all
   end
 
   def update
   	p '1'
   	p @institute = Institute.find(params[:id])
 	if @institute.update(institute_params)
-  		redirect_to '/institute/#{params[:id]}'
+  		redirect_to '/institute/'+@institute.id.to_s
   	else
   		render 'edit'
   	end

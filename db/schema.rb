@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151202191148) do
+ActiveRecord::Schema.define(version: 20151202204225) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,30 @@ ActiveRecord::Schema.define(version: 20151202191148) do
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
+
+  create_table "events", force: :cascade do |t|
+    t.integer  "institute_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
+  add_index "events", ["institute_id"], name: "index_events_on_institute_id", using: :btree
+
+  create_table "galleries", force: :cascade do |t|
+    t.integer  "institute_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
+  add_index "galleries", ["institute_id"], name: "index_galleries_on_institute_id", using: :btree
 
   create_table "institutes", force: :cascade do |t|
     t.text     "name"
@@ -65,4 +89,6 @@ ActiveRecord::Schema.define(version: 20151202191148) do
     t.datetime "updated_at",    null: false
   end
 
+  add_foreign_key "events", "institutes"
+  add_foreign_key "galleries", "institutes"
 end
