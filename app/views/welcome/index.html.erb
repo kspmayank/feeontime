@@ -33,7 +33,7 @@
 	<div id="home" class="tab-pane fade in active">
 		<center><h3 style="color: #41BAE5;">List of All School, Colleges and Tutions In India Based</h3></center>
 
-		<%@institute. each do |i|%>
+		<%@institute.each do |i|%>
 		<div class="row" style="margin:2em;">
 			<div class="col-md-2"></div>
 			<a href="/institute/<%=i.id.to_s%>">
@@ -55,17 +55,17 @@
 	<div id="menu1" class="tab-pane fade">
 		<center><h3 style="color: #41BAE5;">List of All Colleges In India Based</h3></center>
 
-		<%@institute. each do |i|%>
+		<%@institute.where(category: 'college').each do |i|%>
 		<div class="row" style="margin:2em;">
 			<div class="col-md-2"></div>
 			<a href="/institute/<%=i.id.to_s%>">
 			<div class="col-md-8" style="background: #fff; border-radius: 10px; padding: 0;">
 				<div class="col-md-2" style="padding : 0;">
-					<img src="http://mayankkashyap.com/img/Mayank%20Kashyap%202.jpg" height="100" width="100">
+					<img src="<%=i.logo.url%>" height="100" width="100">
 				</div>
 				<div class="col-md-10" style="padding: 0;">
-				<h3 style="margin-top: 10px; color: #000;">Maharaja Surajmal Institute of Technology, New Delhi</h3>
-				<i class="glyphicon glyphicon-map-marker" style="color: #616161;"></i> <span style="color: #616161; font-size: 1.1em;">C-4, Janakpuri, New Delhi</span>
+				<h3 style="margin-top: 10px; color: #000;"><%=i.name%></h3>
+				<i class="glyphicon glyphicon-map-marker" style="color: #616161;"></i> <span style="color: #616161; font-size: 1.1em;"><%=i.address	%></span>
 				</div>
 			</div>
 			</a>
@@ -78,17 +78,17 @@
 	<div id="menu2" class="tab-pane fade">
 		<center><h3 style="color: #41BAE5;">List of All Schools In India Based</h3></center>
 
-		<%@institute. each do |i|%>
+		<%@institute.where(category: 'school').each do |i|%>
 		<div class="row" style="margin:2em;">
 			<div class="col-md-2"></div>
 			<a href="/institute/<%=i.id.to_s%>">
 			<div class="col-md-8" style="background: #fff; border-radius: 10px; padding: 0;">
 				<div class="col-md-2" style="padding : 0;">
-					<img src="http://mayankkashyap.com/img/Mayank%20Kashyap%202.jpg" height="100" width="100">
+					<img src="<%=i.logo.url%>" height="100" width="100">
 				</div>
 				<div class="col-md-10" style="padding: 0;">
-				<h3 style="margin-top: 10px; color: #000;">Maharaja Surajmal Institute of Technology, New Delhi</h3>
-				<i class="glyphicon glyphicon-map-marker" style="color: #616161;"></i> <span style="color: #616161; font-size: 1.1em;">C-4, Janakpuri, New Delhi</span>
+				<h3 style="margin-top: 10px; color: #000;"><%=i.name%></h3>
+				<i class="glyphicon glyphicon-map-marker" style="color: #616161;"></i> <span style="color: #616161; font-size: 1.1em;"><%=i.address%></span>
 				</div>
 			</div></a>
 			<div class="col-md-2"></div>
@@ -100,17 +100,17 @@
 	<div id="menu3" class="tab-pane fade">
 		<center><h3 style="color: #41BAE5;">List of All Tutions In India Based</h3></center>
 
-		<%@institute. each do |i|%>
+		<%@institute.where(category: 'tution').each do |i|%>
 		<div class="row" style="margin:2em;">
 			<div class="col-md-2"></div>
 			<a href="/institute/<%=i.id.to_s%>">
 			<div class="col-md-8" style="background: #fff; border-radius: 10px; padding: 0;">
 				<div class="col-md-2" style="padding : 0;">
-					<img src="http://mayankkashyap.com/img/Mayank%20Kashyap%202.jpg" height="100" width="100">
+					<img src="<%=i.logo.url%>" height="100" width="100">
 				</div>
 				<div class="col-md-10" style="padding: 0;">
-				<h3 style="margin-top: 10px; color: #000;">Maharaja Surajmal Institute of Technology, New Delhi</h3>
-				<i class="glyphicon glyphicon-map-marker" style="color: #616161;"></i> <span style="color: #616161; font-size: 1.1em;">C-4, Janakpuri, New Delhi</span>
+				<h3 style="margin-top: 10px; color: #000;"><%=i.name%></h3>
+				<i class="glyphicon glyphicon-map-marker" style="color: #616161;"></i> <span style="color: #616161; font-size: 1.1em;"><%=i.name%></span>
 				</div>
 			</div></a>
 			<div class="col-md-2"></div>
