@@ -16,5 +16,6 @@ class SessionController < ApplicationController
   else
     redirect_to home_url
   end
+  end
 
 end

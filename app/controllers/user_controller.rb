@@ -17,5 +17,6 @@ class UserController < ApplicationController
   		@user.save!
   	else
   		redirect_to '/'
+  	end
   end
 end
