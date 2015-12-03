@@ -1,8 +1,14 @@
-<h1>Edit Institute Details</h1>
+<div style="background: #E9F5F5;">
+	<div style="background-image: linear-gradient(to bottom, rgba(7, 37, 89, 0.8), rgba(7, 37, 89, 0.8)), url('<%=@institute.cover.url%>'); background-size: cover; height: 13em;">
+		<div class="container" style="text-align: right; padding-right: 15%; padding-top: 6em;">
+			<h3 style="margin: 0; color: #fff;">Edit <%=@institute.name%> Details</h3>
+			<i class="glyphicon glyphicon-map-marker" style="color: #C1B7B7;"></i> <span style="color: #C1B7B7; font-size: 1.1em;"><%=@institute.address%></span>
+		</div>
+	</div>
 
-<br>
 <%= form_for :institute, url: institute_path(@institute), method: :patch do |f| %>
-
+<div style="background: #04183B;">
+<div class="container">
 <ul class="nav nav-tabs">
 <li class="active"><a data-toggle="tab" href="#home">General</a></li>
 	<li><a data-toggle="tab" href="#menu1">Info</a></li>
@@ -12,7 +18,9 @@
 	<li><a data-toggle="tab" href="#menu5">Events</a></li>
 	<li><a data-toggle="tab" href="#menu6">Others</a></li>	
 </ul>
-
+</div>
+</div>
+<div class="container">
 <div class="tab-content">
 	<div id="home" class="tab-pane fade in active">
 		<h3>General</h3>
@@ -23,6 +31,14 @@
 		  <p>
 		    <%= f.label :address %><br>
 		    <%= f.text_field :address %>
+		  </p>
+		  <p>
+		    <%= f.label :category %> 
+			<%= f.select :category, options_for_select([["College", "college"], ["School", "school"], ["Tution", "tution"]], @institute.category) %>
+		  </p>
+		  <p>
+		  	<%= f.label :pay_link %><br>
+		  	<%= f.text_field :paylink %>
 		  </p>
 		  <p>
 		  	<%= f.label :logo %>
@@ -81,16 +97,16 @@
 <hr><hr>
 
   <center><p>
-    <%= f.submit %>
+    <%= f.submit 'Done Editing', :class => 'btn btn-success' %>
   </p></center>
 <% end %>
 
 <h2>Upload Images For Gallery Slider Here</h2>
 
 <%= form_for :gallery, url: '/gallery/'+@institute.id.to_s do |f| %>
-	<%= f.file_field :gallery, :multiple => true  %>
+	<%= f.file_field :gallery, :multiple => true  %><br>
 	<%# f.text_field :institute_id,  %>
-	<%= f.submit %>
+    <%= f.submit 'Upload Images', :class => 'btn btn-success' %>
 <%end%>
 
 <h3>Existing Images</h3>
@@ -101,12 +117,12 @@
 
 
 
-<h2>Upload Images For Events Slider Here</h2>
+<h2 id="upload-images">Upload Images For Events Slider Here</h2>
 
 <%= form_for :event, url: '/event/'+@institute.id.to_s do |f| %>
-	<%= f.file_field :event, :multiple => true  %>
+	<%= f.file_field :event, :multiple => true  %><br>
 	<%# f.text_field :institute_id,  %>
-	<%= f.submit %>
+    <%= f.submit 'Upload Images', :class => 'btn btn-success' %>
 <%end%>
 
 <h3>Existing Images</h3>
@@ -114,3 +130,6 @@
 	<img src="<%=e.photo.url%>" height="100" width="100">
 <%end%>
 	<%# image_tag @gallery.first.photo.url %>	
+
+</div>
+</div>
