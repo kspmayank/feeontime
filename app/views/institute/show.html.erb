@@ -3,8 +3,8 @@
 <div style="background: #E9F5F5;">
 	<div style="background-image: linear-gradient(to bottom, rgba(7, 37, 89, 0.8), rgba(7, 37, 89, 0.8)), url('<%=@institute.cover.url%>'); background-size: cover; height: 13em;">
 		<div class="container" style="text-align: right; padding-right: 15%; padding-top: 6em;">
-			<h3 style="margin: 0; color: #fff;">Maharaja Surajmal Institute of Technology, New Delhi</h3>
-			<i class="glyphicon glyphicon-map-marker" style="color: #C1B7B7;"></i> <span style="color: #C1B7B7; font-size: 1.1em;">C-4, Janakpuri, New Delhi</span>
+			<h3 style="margin: 0; color: #fff;"><%=@institute.name%></h3>
+			<i class="glyphicon glyphicon-map-marker" style="color: #C1B7B7;"></i> <span style="color: #C1B7B7; font-size: 1.1em;"><%=@institute.address%></span>
 		</div>
 	</div>
 
@@ -22,7 +22,7 @@
 		</div>
 	</div>
 	<div class="container">
-		<div class="tab-content">
+		<div class="tab-content" style="min-height: 26em;">
 
 			<div id="home" class="tab-pane fade in active">
 				<%# @institute.logo.url %>
