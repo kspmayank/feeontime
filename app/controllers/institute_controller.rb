@@ -16,7 +16,7 @@ class InstituteController < ApplicationController
   	  if @institute = Institute.create(institute_params)
   	  	# p @institute
   	  	# @institute.save
-  	    redirect_to '/institute/'+@institute.id+'/edit#upload-images'
+  	    redirect_to '/institute/'+@institute.id.to_s+'/edit#upload-images'
   	  else
   	    render 'new'
   	  end
