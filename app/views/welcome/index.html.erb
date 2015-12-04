@@ -1,10 +1,10 @@
 <div style="background: #E9F5F5;">
 <div style="background-image: linear-gradient(to bottom, rgba(7, 37, 89, 0.8), rgba(7, 37, 89, 0.8)), url('/college.jpg'); background-size: cover; height: 13em;">
-	<%= form_tag '/logidfdfdfdfn' do %>
+	<%= form_tag url: '/' do %>
 	<center><div id="custom-search-input" style="padding-top: 5em;">
 		<div class="input-group col-md-6">
 			<!-- <input type="text" class="form-control input-lg" placeholder="Buscar" /> -->
-	  		<%= text_field_tag :search, nil, class: "form-control input-lg", placeholder: 'Search Colleges...'   %>
+	  		<%= text_field_tag :name, nil, class: "form-control input-lg", placeholder: 'Search Colleges...', data: {autocomplete_source: Institute.order(:name).map(&:name)}   %>
 			<span class="input-group-btn">
 				<!-- <button class="btn btn-info btn-lg" type="button"> -->
 	  				<%# submit_tag "", :class => 'btn btn-info btn-lg' %>
